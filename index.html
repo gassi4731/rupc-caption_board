@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/style.css" />
+		<title>キャプションボード</title>
+	</head>
+	<body>
+		<div class="noPrint">
+			<h2>立命館大学　写真部 キャプションボード自動生成</h2>
+			<h3>使い方</h3>
+			<ol>
+				<li>
+					「作品名・説明（ポエム）・名前・学年（数字のみ）」の情報が入っているCSVファイルを用意する。
+				</li>
+				<li>
+					1で用意したCSVファイルをdataフォルダ内に、「default.csv」と名前を変更して保存する。
+				</li>
+				<li>下の生成するをクリック</li>
+				<li>
+					印刷する<br />印刷時の設定
+					<ul>
+						<li>余白は、「なし」に設定</li>
+						<li>オプションの背景のグラフィックを「有効」にする</li>
+					</ul>
+				</li>
+			</ol>
+			<br />
+			<input type="button" value="生成する" onclick="draw()" />
+		</div>
+		<div class="boards">
+			<!-- <div class="board">
+				<img src="./assets/tonbo.svg" />
+				<div class="caption">
+					<h1>はたとせ。</h1>
+					<p>夜景でしか見れない景色...</p>
+				</div>
+				<p class="nameAndGrade">立命 太郎　1回生</p>
+			</div> -->
+		</div>
+		<script src="./assets/script.js"></script>
+	</body>
+</html>

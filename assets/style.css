@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "Noto_Serif_JP-SemiBold";
+	src: url("../fonts/NotoSerifJP-SemiBold.otf");
+}
+
+@font-face {
+	font-family: "Noto_Serif_JP-Regular";
+	src: url("../fonts/NotoSerifJP-Regular.otf");
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 18pt;
+	font-family: "Noto_Serif_JP-SemiBold";
+}
+
+p {
+	font-size: 9pt;
+	font-family: "Noto_Serif_JP-Regular";
+}
+
+.space {
+  width: 100vw;
+  height: 27mm;
+}
+
+.boards {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.board {
+	width: 61.2mm;
+	height: 61.2mm;
+	padding: 14.4mm;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.board img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.board .nameAndGrade {
+	position: absolute;
+	bottom: 14.4mm;
+	left: 14.4mm;
+}
+
+/* 以下説明場所用 */
+@media print {
+	.noPrint {
+		display: none;
+	}
+}
+
+.noPrint ol {
+	padding-left: 1.5rem;
+}
+
+.noPrint ul {
+	padding-left: 1.5rem;
+}
