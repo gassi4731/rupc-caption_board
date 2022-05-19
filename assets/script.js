@@ -40,14 +40,14 @@ function draw() {
 		caption.className = "caption";
 
 		var title = document.createElement("h1");
-		title.textContent = photos[i][0];
+		title.innerHTML = photos[i][0];
 
 		var description = document.createElement("p");
-		description.textContent = photos[i][1];
+		description.innerHTML = photos[i][1];
 
 		var nameAndGrade = document.createElement("p");
 		nameAndGrade.className = "nameAndGrade";
-		nameAndGrade.textContent = photos[i][2] + "　" + photos[i][3] + "回生";
+		nameAndGrade.innerHTML = photos[i][2] + "　" + photos[i][3] + "回生";
 
 		var tonbo = document.createElement("img");
 		tonbo.src = "./assets/tonbo.svg";
