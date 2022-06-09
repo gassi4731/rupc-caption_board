@@ -14,15 +14,15 @@
 			<hr />
 			<h3>使い方</h3>
 			<ol>
-				<li>
-					「作品名・説明（ポエム）・名前・学年」の情報を用意する。
-				</li>
+				<li>「作品名・説明（ポエム）・名前・学年」の情報を用意する。</li>
 				<li>
 					1で用意した情報を下のフォームに入力する。
-          <ul>
-            <li>「作品名・説明（ポエム）・名前・学年」は、コンマ区切りで入力</li>
-            <li>作品ごとは改行区切りで入力</li>
-          </ul>
+					<ul>
+						<li>
+							「作品名・説明（ポエム）・名前・学年」は、コンマ区切りで入力
+						</li>
+						<li>作品ごとは改行区切りで入力</li>
+					</ul>
 				</li>
 				<li>下の生成するをクリック</li>
 				<li>
@@ -36,15 +36,18 @@
 			<br />
 			<br />
 			<h3>作品情報を入力</h3>
-			<p>作品情報を入力をカンマ区切りで入力してください。改行を行いたい場合は、&lt;br&gt;を書いてください。</p>
+			<p>
+				作品情報を入力をカンマ区切りで入力してください。改行を行いたい場合は、&lt;br&gt;を書いてください。
+			</p>
 			<textarea
+				id="inputText"
 				placeholder="はたとせ。,夜景でしか見れない景色,立命太郎,1回生"
 				rows="5"
 				autofocus
 			></textarea>
 			<div class="button">
-				<input type="button" value="生成する" onclick="draw()" />
-				<input type="button" value="生成して印刷する" />
+				<input type="button" value="生成する" onclick="onClickDraw()" />
+				<input type="button" value="生成して印刷する" onclick="onClickDrawPrint()" />
 			</div>
 		</div>
 		<div class="boards">

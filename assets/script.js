@@ -1,16 +1,5 @@
 var photos = [];
 
-function getCSV() {
-	var req = new XMLHttpRequest(); // HTTPでファイルを読み込むためのXMLHttpRrequestオブジェクトを生成
-	req.open("get", "../data/default.csv", true); // アクセスするファイルを指定
-	req.send(null); // HTTPリクエストの発行
-
-	// レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ
-	req.onload = function () {
-		convertCSVtoArray(req.responseText); // 渡されるのは読み込んだCSVデータ
-	};
-}
-
 // 読み込んだCSVデータを二次元配列に変換する関数convertCSVtoArray()の定義
 function convertCSVtoArray(str) {
 	// 読み込んだCSVデータが文字列として渡される
@@ -20,6 +9,11 @@ function convertCSVtoArray(str) {
 	for (var i = 0; i < tmp.length; ++i) {
 		photos[i] = tmp[i].split(",");
 	}
+}
+
+function getInputText() {
+	var input = document.getElementById("inputText");
+	return input.value;
 }
 
 // 描画する
@@ -69,12 +63,17 @@ function draw() {
 	}
 }
 
-function main() {
-	new Promise(() => {
-		getCSV();
-	}).then(() => {
-		draw();
-	});
+function onClickDraw() {
+	const text = getInputText();
+	if (text == "") {
+		alert("作品情報を入力してください");
+		return;
+	}
+	convertCSVtoArray(text);
+	draw();
 }
 
-getCSV();
+function onClickDrawPrint() {
+	onClickDraw();
+	window.print();
+}
