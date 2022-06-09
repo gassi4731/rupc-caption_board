@@ -24,8 +24,8 @@ p {
 }
 
 .space {
-  width: 100vw;
-  height: 27mm;
+	width: 100vw;
+	height: 27mm;
 }
 
 .boards {
@@ -67,4 +67,52 @@ p {
 
 .noPrint ul {
 	padding-left: 1.5rem;
+}
+
+.noPrint {
+	font-family: system-ui;
+	width: 80vw;
+	max-width: 750px;
+	margin: 10px auto;
+	padding: 30px;
+	padding-top: 15px;
+	background-color: #fbfbf6;
+}
+
+.noPrint .icon {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.noPrint h2 {
+	text-align: center;
+}
+
+.noPrint hr {
+	width: 30px;
+	border: 0.5px solid #ccc;
+	margin: 15px auto 30px auto;
+}
+
+.noPrint textarea {
+	width: calc(100% - 1em - 4px);
+	margin-top: 1em;
+  margin-bottom: 0.25em;
+	padding: 0.5em; /* 枠線内の余白 */
+	font-size: 1em; /* フォントサイズ */
+	border: solid 2px #e1e3e8; /* 枠線のスタイル */
+	border-radius: 4px; /* 角丸に */
+	resize: none; /* リサイズ不可に */
+}
+
+.noPrint textarea:focus {
+	border-color: #56a9ff;
+	outline: 0;
+}
+
+.noPrint .button {
+	width: 100%;
+	display: flex;
+	justify-content: right;
+  gap: 0.5rem;
 }
