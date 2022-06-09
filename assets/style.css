@@ -31,6 +31,7 @@ p {
 .boards {
 	display: flex;
 	flex-wrap: wrap;
+  padding: 10px;
 }
 
 .board {
