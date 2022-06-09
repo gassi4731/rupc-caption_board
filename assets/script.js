@@ -19,6 +19,7 @@ function getInputText() {
 // 描画する
 function draw() {
 	var boards = document.getElementsByClassName("boards")[0];
+	boards.innerHTML = "";
 
 	for (var i = 0; i < photos.length; i++) {
 		// 値（氏名）がない場合はスキップする
