@@ -42,7 +42,7 @@ function draw() {
 
 		var nameAndGrade = document.createElement("p");
 		nameAndGrade.className = "nameAndGrade";
-		nameAndGrade.innerHTML = photos[i][2] + "　" + photos[i][3] + "回生";
+		nameAndGrade.innerHTML = photos[i][2] + "　" + photos[i][3];
 
 		var tonbo = document.createElement("img");
 		tonbo.src = "./assets/tonbo.svg";
