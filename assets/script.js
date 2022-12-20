@@ -7,7 +7,7 @@ function convertCSVtoArray(str) {
 
 	// 各行ごとにカンマで区切った文字列を要素とした二次元配列を生成
 	for (var i = 0; i < tmp.length; ++i) {
-		photos[i] = tmp[i].split(",");
+		photos[i] = tmp[i].split("@@");
 	}
 }
 
